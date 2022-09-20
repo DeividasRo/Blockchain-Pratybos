@@ -1,3 +1,3 @@
 # Blockchain-Pratybos
 
-##Versija 0.1
+## Versija 0.1
