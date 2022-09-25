@@ -1,7 +1,6 @@
 #include <string>
 #include <sstream>
 #include <cmath>
-#include <iostream>
 #include <iomanip>
 std::string Hash(std::string input)
 {
