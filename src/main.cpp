@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     else
     {
         std::cout << "Enter your input:" << std::endl;
-        std::cin >> input;
+        std::getline(std::cin, input);
     }
 
     output = Hash(input);
