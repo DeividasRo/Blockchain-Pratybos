@@ -24,7 +24,7 @@ Visi testavimui naudoti failai saugomi text-files aplanke.
 #### Rezultatai
 
 | Failo vardas | Maišos funkcijos rezultatas|
-|--------------|----------------------------|
+|:--------------:|----------------------------|
 |***a1.txt***|0838b0eecdddd11aac39a353bb91ccf256468788286464ff3a1787e0f781d442|
 |***a2.txt***|8e7990524b9cf1a62a7883ef3dd0ec4ed007a734ae254443bc56a75c71c0f4fe|
 |***b1.txt***|405f4d9a892d0834eeb0a0f1f8748d871b9d5b9c62242fa87163b51cb0ed0d3c|
