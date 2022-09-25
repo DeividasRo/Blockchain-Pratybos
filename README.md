@@ -44,8 +44,10 @@ Kiekvieno eksperimento metu panaudota skirtingos apimties įvestis. Pirmo eksper
 #### Rezultatai
 
 |Įvesties apimtis (eilučių kiekis)|1|2|4|8|16|32|64|128|256|512|790|
-|---|---|---|---|---|---||---|---||---|---|
+|---------------------------------|-|-|-|-|--|--|--|---|---|---|---|
 |**Maišos funkcijos veikimo laikas**|10ms|13ms|15ms|20ms|40ms|65ms|123ms|294ms|684ms|1496ms|2754ms|
+
+<kbd><img src="https://user-images.githubusercontent.com/99316667/192141188-50fc191f-b791-4318-a39e-2f997a35573f.png"></kbd>
 
 ### Tyrimas Nr. 3
 
