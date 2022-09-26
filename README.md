@@ -25,12 +25,12 @@ Visi testavimui naudoti failai saugomi text-files aplanke.
 
 | Failo vardas | Maišos funkcijos rezultatas|
 |--------------|----------------------------|
-|***a1.txt***|9f89c5ee5a6ca41a3b88d6532c20b9f2c1f7f288bfd511ffada6f2e06030a142|
-|***a2.txt***|6becc4d2ae09a526cfedd76fd845b8ce3592f3b44bb010c359c3f3dc9455a07e|
-|***b1.txt***|0bedb897c29ffd39a50255fcb3c6788a502fae912996daa53ad14011fb5ff831|
-|***b2.txt***|b9c21f3470b05a9a172df25f01e9df29e20009329bb97d0688fee7b249705f92|
-|***c1.txt***|cf0314230671518d61ecf9487728d43e94c10225ed787611fe3feca53fb15485|
-|***c2.txt***|d5f9165e1c8b53f07b16fb356dd2d6438e3b0058f782746ce4c5eed8254b56f8|
+|***a1.txt***|a4dbd526613eb4d200dac69b1772a93afaa5e2408487013796f4e2285b62b18a|
+|***a2.txt***|6a4f299dafaa4869ce4e3a20d9e6558134311efb4a13fd8c58601e9395f64d31|
+|***b1.txt***|95f6f5655c84b0cb3b19180e2ddd3578ce34e363b78d9757a4ca0de36544b5c3|
+|***b2.txt***|b127e6e17855a34f1fc80b8a090c26fceae5f0e7935c84d3801b1e674195a647|
+|***c1.txt***|e7a694982ed4d136494979f35f8d5485bc64829ec5ddf6aad69a6c1e1714d43e|
+|***c2.txt***|e4ecd8d62d9e9d784a0335bd5cc718cbbf2eced0c697bae4d5d02050145e9870|
 |***empty.txt***|e49b69c12de92c6f4a7484aa5cb0a9dcbf597fc7c6e00bf3d5a7914714292967|
 
 ### Tyrimas Nr. 2

@@ -10,8 +10,7 @@ std::string Hash(std::string input)
     // Starting primes
     unsigned int hex_arr[8] = {0xe49b69c1, 0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0xbf597fc7, 0xc6e00bf3, 0xd5a79147, 0x14292967};
     // Other primes for calculations
-    const int left_primes[16] = {107, 73, 7, 113, 131, 47, 139, 79, 89, 23, 101, 151, 163, 173, 193, 199};
-    const int right_primes[12] = {199, 223, 181, 193, 229, 239, 251, 263, 277, 179, 271, 281};
+    const int primes[30] = {107, 5, 229, 23, 3, 73, 7, 113, 181, 131, 47, 139, 79, 241, 89, 257, 23, 101, 269, 151, 163, 173, 193, 59, 199, 211, 223, 277, 239, 307};
     for (size_t i = 0; i < input.length(); i++)
     {
         double ascii = (int)input[i];
@@ -21,7 +20,8 @@ std::string Hash(std::string input)
             ascii += 256;
         }
 
-        unsigned int x = ((ascii * left_primes[(int)ascii % 16]) / (ascii * right_primes[i % 12] + 1) * pow(2, 32)); // formula
+        unsigned int x = (double)(primes[(unsigned int)(ascii + i) % 30]) / double(307 + ascii / 2) * pow(2, 32); // formula
+
         for (int j = 0; j < 8; j++)
         {
             unsigned int temp;
