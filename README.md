@@ -51,7 +51,28 @@ Kiekvieno eksperimento metu panaudota skirtingos apimties įvestis. Pirmo eksper
 
 ### Tyrimas Nr. 3
 
+#### Aprašymas
 
+Trečiojo tyrimo metu ištirta, ar maišos funkcija yra praktiškai atspari kolizijoms. Tyrimo metu generuojama 100000 simbolių eilučių (string'ų) porų:
+- 25000 porų po 10 atsitiktinių simbolių kiekvienoje simbolių eilutėje;
+- 25000 porų po 100 atsitiktinių simbolių kiekvienoje simbolių eilutėje;
+- 25000 porų po 500 atsitiktinių simbolių kiekvienoje simbolių eilutėje;
+- 25000 porų po 1000 atsitiktinių simbolių kiekvienoje simbolių eilutėje.
+
+Kiekvienoje poroje tikrinami abiejų simbolių eilučių maišos funkcijos rezultatai. 
+
+#### Rezultatai
+
+Atlikus visus testus, kolizijų neaptikta.
+
+`1# Testing 25000 pairs of strings, each string consists of 10 random symbols...
+Collisions detected: 0
+2# Testing 25000 pairs of strings, each string consists of 100 random symbols...
+Collisions detected: 0
+3# Testing 25000 pairs of strings, each string consists of 500 random symbols...
+Collisions detected: 0
+4# Testing 25000 pairs of strings, each string consists of 1000 random symbols...
+Collisions detected: 0`
 
 ### Tyrimas Nr. 4
 
