@@ -1,4 +1,5 @@
 #include "myhash.h"
+#include "tests.h"
 #include <iostream>
 #include <sstream>
 #include <fstream>
@@ -40,7 +41,22 @@ int main(int argc, char *argv[])
 
     if (argc == 2) // One command line argument - text file name
     {
-        input = ReadFileToString(argv[1]);
+        if (argv[1] == std::string("coltest"))
+        {
+            std::cout << "1# Testing 25000 pairs of strings, each string consists of 10 random symbols..." << std::endl;
+            std::cout << CollisionTest(&Hash, 10) << std::endl;
+            std::cout << "2# Testing 25000 pairs of strings, each string consists of 100 random symbols..." << std::endl;
+            std::cout << CollisionTest(&Hash, 100) << std::endl;
+            std::cout << "3# Testing 25000 pairs of strings, each string consists of 500 random symbols..." << std::endl;
+            std::cout << CollisionTest(&Hash, 500) << std::endl;
+            std::cout << "4# Testing 25000 pairs of strings, each string consists of 1000 random symbols..." << std::endl;
+            std::cout << CollisionTest(&Hash, 1000) << std::endl;
+            return 0;
+        }
+        else
+        {
+            input = ReadFileToString(argv[1]);
+        }
     }
     else if (argc == 3) // Two command line arguments - text file name and amount of lines to read
     {

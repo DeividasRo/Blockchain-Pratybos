@@ -25,12 +25,12 @@ Visi testavimui naudoti failai saugomi text-files aplanke.
 
 | Failo vardas | Maišos funkcijos rezultatas|
 |--------------|----------------------------|
-|***a1.txt***|6bed734dae0812b9cfec60f0d8440f513593442b4bb1a75c59c24443945417e1|
-|***a2.txt***|729ae908b77f88fcd69bfab5c13395142ce4de6e52c63d1940b5de068d238da4|
-|***b1.txt***|6fd95bd1a6ab1e7fc136b6bad7f29bcc341b4dd74da239e35ee5a3579f6b1b77|
-|***b2.txt***|efd7acff26a5e9514138419457fc6ce2b415baf9cdaccecddeeb54791f65ec59|
-|***c1.txt***|ff37cfe636458a4851d8228d471c0ffba4f5d9e0dd4cadd4ce0b37600f858f40|
-|***c2.txt***|0cfd28a4c58f6d0aa212c5cfb4d6e8b9573f3ea22e864a963dc1d022fc4f6802|
+|***a1.txt***|9f89c5ee5a6ca41a3b88d6532c20b9f2c1f7f288bfd511ffada6f2e06030a142|
+|***a2.txt***|6becc4d2ae09a526cfedd76fd845b8ce3592f3b44bb010c359c3f3dc9455a07e|
+|***b1.txt***|0bedb897c29ffd39a50255fcb3c6788a502fae912996daa53ad14011fb5ff831|
+|***b2.txt***|b9c21f3470b05a9a172df25f01e9df29e20009329bb97d0688fee7b249705f92|
+|***c1.txt***|cf0314230671518d61ecf9487728d43e94c10225ed787611fe3feca53fb15485|
+|***c2.txt***|d5f9165e1c8b53f07b16fb356dd2d6438e3b0058f782746ce4c5eed8254b56f8|
 |***empty.txt***|e49b69c12de92c6f4a7484aa5cb0a9dcbf597fc7c6e00bf3d5a7914714292967|
 
 ### Tyrimas Nr. 2
@@ -50,6 +50,8 @@ Kiekvieno eksperimento metu panaudota skirtingos apimties įvestis. Pirmo eksper
 <kbd><img src="https://user-images.githubusercontent.com/99316667/192141188-50fc191f-b791-4318-a39e-2f997a35573f.png"></kbd>
 
 ### Tyrimas Nr. 3
+
+
 
 ### Tyrimas Nr. 4
 
