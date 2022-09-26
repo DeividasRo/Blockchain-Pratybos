@@ -2,15 +2,21 @@
 #include <sstream>
 #include <cmath>
 #include <iomanip>
+
 std::string Hash(std::string input)
 {
     std::stringstream hex_hash;
 
     unsigned int hex_arr[8] = {0xe49b69c1, 0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0xbf597fc7, 0xc6e00bf3, 0xd5a79147, 0x14292967}; // Starting primes
     const int primes[10] = {43, 139, 251, 373, 491, 619, 757, 887, 1033, 1181};                                                 // Other primes for calculations
-    for (int i = 0; i < input.length(); i++)
+    for (size_t i = 0; i < input.length(); i++)
     {
-        unsigned int x = (((double)input[i] * primes[(int)input[i] % 10] * 25163) / ((double)input.length() + (double)input[i] * primes[i % 10] * 27277) * pow(2, 32)); // formula
+        double ascii = (int)input[i];
+        if (ascii < 0)
+        {
+            ascii += 256;
+        }
+        unsigned int x = ((ascii * primes[(int)ascii % 10]) / (input.length() + ascii * primes[i % 10]) * pow(2, 32)); // formula
         for (int j = 0; j < 8; j++)
         {
             unsigned int temp;

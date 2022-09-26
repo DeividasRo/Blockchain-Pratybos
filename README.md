@@ -25,12 +25,12 @@ Visi testavimui naudoti failai saugomi text-files aplanke.
 
 | Failo vardas | Maišos funkcijos rezultatas|
 |--------------|----------------------------|
-|***a1.txt***|0838b0eecdddd11aac39a353bb91ccf256468788286464ff3a1787e0f781d442|
-|***a2.txt***|8e7990524b9cf1a62a7883ef3dd0ec4ed007a734ae254443bc56a75c71c0f4fe|
-|***b1.txt***|405f4d9a892d0834eeb0a0f1f8748d871b9d5b9c62242fa87163b51cb0ed0d3c|
-|***b2.txt***|5d85eb2994f7ae87f36a0642e5ae2b340647fd2f7ffe891b6cb913afad37ab8f|
-|***c1.txt***|c7d553870ea71629693abeec7ffe939a9c174581e5ae31b5f6e9ab0137671321|
-|***c2.txt***|67f7097aae854cd4c918e411dfdcc9673c351f7c458c6b4856cbf1fc974549dc|
+|***a1.txt***|1adea6b5df3bc741bedfb508a977daa944a091d33a8272a428f191bbe567c219|
+|***a2.txt***|31b10f76f4546e8295b01ccb8218736a6fcf381011eddb67039e3878ce086bda|
+|***b1.txt***|a72607126e5442bc09c9ea791f0dc70ffce41114855d6520961aff94579447b4|
+|***b2.txt***|88ca1f2941b85a872625f24230e1df34d308092faab17d1bb9f6e7af78785f8f|
+|***c1.txt***|0769beb7ce1bfb19a98653dcbf427eaa5caba8b12512dc8536554631f7dbfe11|
+|***c2.txt***|0b2a340ec25871a0a5c5d965b301f41350e822082951563c3a16cc88fb9874a8|
 |***empty.txt***|e49b69c12de92c6f4a7484aa5cb0a9dcbf597fc7c6e00bf3d5a7914714292967|
 
 ### Tyrimas Nr. 2
@@ -44,13 +44,13 @@ Kiekvieno eksperimento metu panaudota skirtingos apimties įvestis. Pirmo eksper
 #### Rezultatai
 
 |Įvesties apimtis (eilučių kiekis)|1|2|4|8|16|32|64|128|256|512|790|
-|---|---|---|---|---|---||---|---||---|---|
-|**Maišos funkcijos veikimo laikas**|10ms|13ms|15ms|20ms|40ms|65ms|123ms|294ms|684ms|1496ms|2754ms|
+|---------------------------------|-|-|-|-|--|--|--|---|---|---|---|
+|**Maišos funkcijos veikimo laikas**|11μs|13μs|15μs|20μs|40μs|65μs|123μs|294μs|684μs|1496μs|2754μs|
+
+<kbd><img src="https://user-images.githubusercontent.com/99316667/192141188-50fc191f-b791-4318-a39e-2f997a35573f.png"></kbd>
 
 ### Tyrimas Nr. 3
 
 ### Tyrimas Nr. 4
-
-### Tyrimas Nr. 5
 
 ## Išvados

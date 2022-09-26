@@ -38,15 +38,15 @@ int main(int argc, char *argv[])
 {
     std::string input, output;
 
-    if (argc == 2)
+    if (argc == 2) // One command line argument - text file name
     {
         input = ReadFileToString(argv[1]);
     }
-    else if (argc == 3)
+    else if (argc == 3) // Two command line arguments - text file name and amount of lines to read
     {
         input = ReadFileToString(argv[1], std::stoi(argv[2]));
     }
-    else
+    else // No command line arguments
     {
         std::cout << "Enter your input:" << std::endl;
         std::getline(std::cin, input);
@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
 
     std::cout << output << std::endl;
-    std::cout << "Duration: " << duration.count() << " ms" << std::endl;
+    std::cout << "Duration: " << duration.count() << " microseconds" << std::endl;
 
     return 0;
 }
