@@ -25,12 +25,12 @@ Visi testavimui naudoti failai saugomi text-files aplanke.
 
 | Failo vardas | Maišos funkcijos rezultatas|
 |--------------|----------------------------|
-|***a1.txt***|1adea6b5df3bc741bedfb508a977daa944a091d33a8272a428f191bbe567c219|
-|***a2.txt***|31b10f76f4546e8295b01ccb8218736a6fcf381011eddb67039e3878ce086bda|
-|***b1.txt***|a72607126e5442bc09c9ea791f0dc70ffce41114855d6520961aff94579447b4|
-|***b2.txt***|88ca1f2941b85a872625f24230e1df34d308092faab17d1bb9f6e7af78785f8f|
-|***c1.txt***|0769beb7ce1bfb19a98653dcbf427eaa5caba8b12512dc8536554631f7dbfe11|
-|***c2.txt***|0b2a340ec25871a0a5c5d965b301f41350e822082951563c3a16cc88fb9874a8|
+|***a1.txt***|6bed734dae0812b9cfec60f0d8440f513593442b4bb1a75c59c24443945417e1|
+|***a2.txt***|729ae908b77f88fcd69bfab5c13395142ce4de6e52c63d1940b5de068d238da4|
+|***b1.txt***|6fd95bd1a6ab1e7fc136b6bad7f29bcc341b4dd74da239e35ee5a3579f6b1b77|
+|***b2.txt***|efd7acff26a5e9514138419457fc6ce2b415baf9cdaccecddeeb54791f65ec59|
+|***c1.txt***|ff37cfe636458a4851d8228d471c0ffba4f5d9e0dd4cadd4ce0b37600f858f40|
+|***c2.txt***|0cfd28a4c58f6d0aa212c5cfb4d6e8b9573f3ea22e864a963dc1d022fc4f6802|
 |***empty.txt***|e49b69c12de92c6f4a7484aa5cb0a9dcbf597fc7c6e00bf3d5a7914714292967|
 
 ### Tyrimas Nr. 2
@@ -39,7 +39,7 @@ Visi testavimui naudoti failai saugomi text-files aplanke.
 
 Antrojo tyrimo metu ištirta, ar maišos funkcija yra efektyvi (rezultatas pateikiamas greitai).
 Tyrimui atlikti panaudotas tekstinis failas ***konstitucija.txt***, sudarytas iš 790 eilučių.
-Kiekvieno eksperimento metu panaudota skirtingos apimties įvestis. Pirmo eksperimento metu apskaičiuotas tekstinio failo vienos eilutės apdorojimo laikas, antro eksperimento - dviejų eilučių, trečio - keturių, ketvirto - aštuonių ir t.t. Tai yra, kiekvieno eksperimento metu, įvesties apimtis buvo dvigubinama iki maksimalaus tiriamojo tekstinio failo eilučių skaičiaus.
+Kiekvieno eksperimento metu panaudota skirtingos apimties įvestis. Pirmo eksperimento metu apskaičiuotas tekstinio failo vienos eilutės apdorojimo laikas, antro eksperimento - dviejų eilučių, trečio - keturių, ketvirto - aštuonių ir t.t. Tai yra, kiekvieno eksperimento metu, įvesties apimtis buvo dvigubinama iki maksimalaus tiriamojo tekstinio failo eilučių skaičiaus. Rezultatai pateikti mikrosekundėmis (1s = 1000000μs).
 
 #### Rezultatai
 
