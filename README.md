@@ -1,4 +1,4 @@
-# Maišos funkcija
+# Maišos funkcija V0.1
 
 ## Pseudokodas
 
@@ -25,12 +25,12 @@ Visi testavimui naudoti failai saugomi text-files aplanke.
 
 | Failo vardas | Maišos funkcijos rezultatas|
 |:------------:|----------------------------|
-|***a1.txt***|a0cd56986528376c04cc452513642a84feb361fe8091828992e261965f743234|
-|***a2.txt***|6d582b52a8bd4aa6c95938efdef1574e33261c344d04ff435f771c5c92e14ffe|
-|***b1.txt***|c868f1e7011ab44966871c8c704331fa93aae7e1ea1393d5f954096138dab141|
-|***b2.txt***|2e9d97f2e7efd25c80727a9996b657ef755f81f40ce6f5c01fa16f74de2fd754|
-|***c1.txt***|c7a6734b0ed436e569499e207f8db3569c64654de5dd1179f69a8bcd371433ed|
-|***c2.txt***|dbfc90d0128ed57e75137dbb63d750cd803e86d6f987f2e2eac068562b4ed076|
+|***a1.txt***|b4cf0bbb7bf6dc381f5799bb092595a6edd30d0d97a7b298847a14f943f8d918|
+|***a2.txt***|7c206318b319b49bd7b8f118c1cafd05253c65ae5f48da3b4c957c5a8b17b1bb|
+|***b1.txt***|02f857d1cb8a127fac17bababad397cc593a41d7208335e333c4af57f24a1777|
+|***b2.txt***|105e889bd92ccd35beb165f0a87548864b9c9e9d3225eaa92162701de0ecc83d|
+|***c1.txt***|3b7c05f3f20e405d9593e8988357c5ee60be13f5190767c10a40fd75cbce4555|
+|***c2.txt***|a1b311d768c154790f5cfcbc1998d1cafa7107d183c873e5908fe95151015171|
 |***empty.txt***|e49b69c12de92c6f4a7484aa5cb0a9dcbf597fc7c6e00bf3d5a7914714292967|
 
 ### Tyrimas Nr. 2
@@ -97,40 +97,40 @@ Kiekvienoje poroje tikrinami abiejų simbolių eilučių *hash'ai* šešioliktai
 
 #### Rezultatai
 
-Atlikus testus nustatyta, kad šešioliktainiame lygmenyje vidutinis skirtingumas lygus 92%, o dvejetainiame lygmenyje vidutinis skirtumas lygus 42%.
+Atlikus testus nustatyta, kad šešioliktainiame lygmenyje vidutinis skirtingumas lygus **92%**, o dvejetainiame lygmenyje vidutinis skirtumas lygus **42%**.
 
 ```
-Testing hash function avalanche effect: 
+Testing hash function avalanche effect:
 1# 25000 pairs of strings, 10 random symbols per string, only 1 differing symbol per pair...
 Min hex difference: 37%
-Min bit difference: 42%
 Max hex difference: 100%
-Max bit difference: 44%
 Average hex difference: 92%
+Min bit difference: 42%
+Max bit difference: 44%
 Average bit difference: 43%
 
 2# 25000 pairs of strings, 100 random symbols per string, only 1 differing symbol per pair...
-Min hex difference: 37%
-Min bit difference: 40%
+Min hex difference: 50%
 Max hex difference: 100%
-Max bit difference: 42%
 Average hex difference: 92%
+Min bit difference: 41%
+Max bit difference: 42%
 Average bit difference: 41%
 
 3# 25000 pairs of strings, 500 random symbols per string, only 1 differing symbol per pair...
 Min hex difference: 50%
-Min bit difference: 42%
 Max hex difference: 100%
-Max bit difference: 43%
 Average hex difference: 92%
+Min bit difference: 42%
+Max bit difference: 43%
 Average bit difference: 43%
 
 4# 25000 pairs of strings, 1000 random symbols per string, only 1 differing symbol per pair...
-Min hex difference: 50%
-Min bit difference: 42%
+Min hex difference: 37%
 Max hex difference: 100%
-Max bit difference: 43%
 Average hex difference: 92%
+Min bit difference: 42%
+Max bit difference: 43%
 Average bit difference: 42%
 ```
 

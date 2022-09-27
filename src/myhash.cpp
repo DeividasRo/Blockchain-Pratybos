@@ -17,7 +17,7 @@ std::string Hash(std::string input)
             ascii += 256;
         }
 
-        unsigned int x = primes[(unsigned int)(ascii) % 30] / double(307.0 + ascii / 10) * pow(2, 32); // formula
+        unsigned int x = primes[(int)(ascii) % 30] / double(307.0 + ascii / 10) * pow(2, 32); // formula
 
         for (int j = 0; j < 8; j++)
         {

@@ -39,9 +39,9 @@ int main(int argc, char *argv[])
 {
     std::string input, output;
 
-    if (argc == 2) // One command line argument - text file name
+    if (argc == 2)
     {
-        if (argv[1] == std::string("colltest"))
+        if (argv[1] == std::string("colltest")) // Hash function collision test
         {
             int tests[4] = {10, 100, 500, 1000};
             std::cout << "Testing hash function collisions: " << std::endl;
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
             }
             return 0;
         }
-        else if (argv[1] == std::string("avaltest"))
+        else if (argv[1] == std::string("avaltest")) // Hash function avalanche test
         {
             int tests[4] = {10, 100, 500, 1000};
             std::cout << "Testing hash function avalanche effect: " << std::endl;
@@ -63,21 +63,21 @@ int main(int argc, char *argv[])
                 std::cout << i + 1 << "# 25000 pairs of strings, " << tests[i] << " random symbols per string, only 1 differing symbol per pair..." << std::endl;
                 AvalancheTest(&Hash, tests[i], diffs);
                 std::cout << "Min hex difference: " << diffs[0] * 100 / 64 << "%" << std::endl;
-                std::cout << "Min bit difference: " << diffs[1] * 100 / 256 << "%" << std::endl;
                 std::cout << "Max hex difference: " << diffs[2] * 100 / 64 << "%" << std::endl;
-                std::cout << "Max bit difference: " << diffs[3] * 100 / 256 << "%" << std::endl;
                 std::cout << "Average hex difference: " << diffs[4] * 100 / 25000 / 64 << "%" << std::endl;
+                std::cout << "Min bit difference: " << diffs[1] * 100 / 256 << "%" << std::endl;
+                std::cout << "Max bit difference: " << diffs[3] * 100 / 256 << "%" << std::endl;
                 std::cout << "Average bit difference: " << diffs[5] * 100 / 25000 / 256 << "%" << std::endl;
                 std::cout << std::endl;
             }
             return 0;
         }
-        else
+        else // Text file name
         {
             input = ReadFileToString(argv[1]);
         }
     }
-    else if (argc == 3) // Two command line arguments - text file name and amount of lines to read
+    else if (argc == 3) // Text file name and amount of lines to read
     {
         input = ReadFileToString(argv[1], std::stoi(argv[2]));
     }
