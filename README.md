@@ -25,12 +25,13 @@ Visi testavimui naudoti failai saugomi text-files aplanke.
 
 | Failo vardas | Maišos funkcijos rezultatas|
 |:------------:|----------------------------|
-|***a1.txt***|a4dbd526613eb4d200dac69b1772a93afaa5e2408487013796f4e2285b62b18a|
-|***a2.txt***|6a4f299dafaa4869ce4e3a20d9e6558134311efb4a13fd8c58601e9395f64d31|
-|***b1.txt***|95f6f5655c84b0cb3b19180e2ddd3578ce34e363b78d9757a4ca0de36544b5c3|
-|***b2.txt***|b127e6e17855a34f1fc80b8a090c26fceae5f0e7935c84d3801b1e674195a647|
-|***c1.txt***|e7a694982ed4d136494979f35f8d5485bc64829ec5ddf6aad69a6c1e1714d43e|
-|***c2.txt***|e4ecd8d62d9e9d784a0335bd5cc718cbbf2eced0c697bae4d5d02050145e9870|
+|***a1.txt***|a0cd56986528376c04cc452513642a84feb361fe8091828992e261965f743234|
+|***a2.txt***|6d582b52a8bd4aa6c95938efdef1574e33261c344d04ff435f771c5c92e14ffe|
+|***b1.txt***|c868f1e7011ab44966871c8c704331fa93aae7e1ea1393d5f954096138dab141|
+|***b2.txt***|2e9d97f2e7efd25c80727a9996b657ef755f81f40ce6f5c01fa16f74de2fd754|
+|***c1.txt***|c7a6734b0ed436e569499e207f8db3569c64654de5dd1179f69a8bcd371433ed|
+|***c2.txt***|dbfc90d0128ed57e75137dbb63d750cd803e86d6f987f2e2eac068562b4ed076|
+|***empty.txt***|e49b69c12de92c6f4a7484aa5cb0a9dcbf597fc7c6e00bf3d5a7914714292967|
 
 ### Tyrimas Nr. 2
 
@@ -53,13 +54,13 @@ Kiekvieno eksperimento metu panaudota skirtingos apimties įvestis. Pirmo eksper
 
 #### Aprašymas
 
-Trečiojo tyrimo metu ištirta, ar maišos funkcija yra praktiškai atspari kolizijoms. Tyrimo metu generuojama 100000 simbolių eilučių (string'ų) porų:
+Trečiojo tyrimo metu ištirta, ar maišos funkcija yra praktiškai atspari kolizijoms. Tyrimo metu generuojama 100000 simbolių eilučių (*string'ų*) porų:
 - 25000 porų po 10 atsitiktinių simbolių kiekvienoje simbolių eilutėje;
 - 25000 porų po 100 atsitiktinių simbolių kiekvienoje simbolių eilutėje;
 - 25000 porų po 500 atsitiktinių simbolių kiekvienoje simbolių eilutėje;
 - 25000 porų po 1000 atsitiktinių simbolių kiekvienoje simbolių eilutėje.
 
-Kiekvienoje poroje tikrinami abiejų simbolių eilučių maišos funkcijos rezultatai. 
+Kiekvienoje poroje tikrinami abiejų simbolių eilučių *hash'ai*. Jeigu jie sutampa, aptinkama kolizija.
 
 #### Rezultatai
 
