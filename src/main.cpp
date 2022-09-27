@@ -44,9 +44,10 @@ int main(int argc, char *argv[])
         if (argv[1] == std::string("colltest"))
         {
             int tests[4] = {10, 100, 500, 1000};
+            std::cout << "Testing hash function collisions: " << std::endl;
             for (int i = 0; i < sizeof(tests) / sizeof(int); i++)
             {
-                std::cout << i + 1 << "# Testing hash collisions of 25000 pairs of strings, each string consists of " << tests[i] << " random symbols..." << std::endl;
+                std::cout << i + 1 << "# 25000 pairs of strings, " << tests[i] << " random symbols per string..." << std::endl;
                 std::cout << CollisionTest(&Hash, tests[i]) << std::endl;
                 std::cout << std::endl;
             }
@@ -55,17 +56,18 @@ int main(int argc, char *argv[])
         else if (argv[1] == std::string("avaltest"))
         {
             int tests[4] = {10, 100, 500, 1000};
+            std::cout << "Testing hash function avalanche effect: " << std::endl;
             for (int i = 0; i < sizeof(tests) / sizeof(int); i++)
             {
-                int diffs[6] = {64, 256, 0, 0, 0, 0}; // 0-1 - min diff, 2-3 - max diff, 4-5 - avg diff (hex first, bit second)
-                std::cout << i + 1 << "# Testing hash avalanche effect of 25000 pairs of strings, each string pair consists of " << tests[i] << " symbols with only 1 differing symbol..." << std::endl;
+                int diffs[6] = {64, 256, 0, 0, 0, 0}; // 0-1 - min diff, 2-3 - max diff, 4-5 - total diff (hex first, bit second)
+                std::cout << i + 1 << "# 25000 pairs of strings, " << tests[i] << " random symbols per string, only 1 differing symbol per pair..." << std::endl;
                 AvalancheTest(&Hash, tests[i], diffs);
                 std::cout << "Min hex difference: " << diffs[0] * 100 / 64 << "%" << std::endl;
-                std::cout << "Min bit difference: " << diffs[1] * 100 / 64 << "%" << std::endl;
+                std::cout << "Min bit difference: " << diffs[1] * 100 / 256 << "%" << std::endl;
                 std::cout << "Max hex difference: " << diffs[2] * 100 / 64 << "%" << std::endl;
-                std::cout << "Max bit difference: " << diffs[3] * 100 / 64 << "%" << std::endl;
+                std::cout << "Max bit difference: " << diffs[3] * 100 / 256 << "%" << std::endl;
                 std::cout << "Average hex difference: " << diffs[4] * 100 / 25000 / 64 << "%" << std::endl;
-                std::cout << "Average bit difference: " << diffs[5] * 100 / 25000 / 64 << "%" << std::endl;
+                std::cout << "Average bit difference: " << diffs[5] * 100 / 25000 / 256 << "%" << std::endl;
                 std::cout << std::endl;
             }
             return 0;

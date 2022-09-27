@@ -67,16 +67,71 @@ Kiekvienoje poroje tikrinami abiejų simbolių eilučių *hash'ai*. Jeigu jie su
 Atlikus visus testus, kolizijų neaptikta.
 
 ```
-1# Testing 25000 pairs of strings, each string consists of 10 random symbols...
+Testing hash function collisions:
+1# 25000 pairs of strings, 10 random symbols per string...
 Collisions detected: 0
-2# Testing 25000 pairs of strings, each string consists of 100 random symbols...
+
+2# 25000 pairs of strings, 100 random symbols per string...
 Collisions detected: 0
-3# Testing 25000 pairs of strings, each string consists of 500 random symbols...
+
+3# 25000 pairs of strings, 500 random symbols per string...
 Collisions detected: 0
-4# Testing 25000 pairs of strings, each string consists of 1000 random symbols...
+
+4# 25000 pairs of strings, 1000 random symbols per string...
 Collisions detected: 0
+
 ```
 
 ### Tyrimas Nr. 4
+
+#### Aprašymas
+
+Ketvirto tyrimo metu ištirta, ar maišos funkcija turi lavinos (*avalanche*) efektą.
+Tyrimo metu generuojama 100000 simbolių eilučių (*string'ų*) porų:
+- 25000 porų po 10 atsitiktinių simbolių kiekvienoje simbolių eilutėje, kiekviena pora skiriasi 1 simboliu;
+- 25000 porų po 100 atsitiktinių simbolių kiekvienoje simbolių eilutėje, kiekviena pora skiriasi 1 simboliu;
+- 25000 porų po 500 atsitiktinių simbolių kiekvienoje simbolių eilutėje, kiekviena pora skiriasi 1 simboliu;
+- 25000 porų po 1000 atsitiktinių simbolių kiekvienoje simbolių eilutėje, kiekviena pora skiriasi 1 simboliu.
+
+Kiekvienoje poroje tikrinami abiejų simbolių eilučių *hash'ai* šešioliktainiu formatu ir dvejetainiu formatu. Tikrinamas kiekvienas simbolis ir nustatomas procentinis abiejų *string'ų* skirtingumas.
+
+#### Rezultatai
+
+Atlikus testus nustatyta, kad šešioliktainiame lygmenyje vidutinis skirtingumas lygus 92%, o dvejetainiame lygmenyje vidutinis skirtumas lygus 42%.
+
+```
+Testing hash function avalanche effect: 
+1# 25000 pairs of strings, 10 random symbols per string, only 1 differing symbol per pair...
+Min hex difference: 37%
+Min bit difference: 42%
+Max hex difference: 100%
+Max bit difference: 44%
+Average hex difference: 92%
+Average bit difference: 43%
+
+2# 25000 pairs of strings, 100 random symbols per string, only 1 differing symbol per pair...
+Min hex difference: 37%
+Min bit difference: 40%
+Max hex difference: 100%
+Max bit difference: 42%
+Average hex difference: 92%
+Average bit difference: 41%
+
+3# 25000 pairs of strings, 500 random symbols per string, only 1 differing symbol per pair...
+Min hex difference: 50%
+Min bit difference: 42%
+Max hex difference: 100%
+Max bit difference: 43%
+Average hex difference: 92%
+Average bit difference: 43%
+
+4# 25000 pairs of strings, 1000 random symbols per string, only 1 differing symbol per pair...
+Min hex difference: 50%
+Min bit difference: 42%
+Max hex difference: 100%
+Max bit difference: 43%
+Average hex difference: 92%
+Average bit difference: 42%
+```
 
 ## Išvados
