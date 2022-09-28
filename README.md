@@ -21,6 +21,8 @@ Pirmojo tyrimo metu ištirta, ar:
 
 Visi testavimui naudoti failai saugomi text-files aplanke.
 
+Tekstinio failo turinio *hash'avimui* naudojama komandinės eilutės komanda `prog <filename.txt>`.
+
 #### Rezultatai
 
 | Failo vardas | Maišos funkcijos rezultatas|
@@ -62,7 +64,7 @@ Trečiojo tyrimo metu ištirta, ar maišos funkcija yra praktiškai atspari koli
 
 Kiekvienoje poroje tikrinami abiejų simbolių eilučių *hash'ai*. Jeigu jie sutampa, aptinkama kolizija.
 
-Testas paleidžiamas `prog colltest` komanda.
+Testas paleidžiamas komandinės eilutės komanda `prog colltest`.
 
 #### Rezultatai
 
@@ -97,7 +99,7 @@ Tyrimo metu generuojama 100000 simbolių eilučių (*string'ų*) porų:
 
 Kiekvienoje poroje tikrinami abiejų simbolių eilučių *hash'ai* šešioliktainiu formatu ir dvejetainiu formatu. Tikrinamas kiekvienas simbolis ir nustatomas procentinis abiejų *string'ų* skirtingumas.
 
-Testas paleidžiamas `prog avaltest` komanda.
+Testas paleidžiamas komandinės eilutės komanda `prog avaltest`.
 
 #### Rezultatai
 
