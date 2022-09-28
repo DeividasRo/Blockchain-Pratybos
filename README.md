@@ -7,18 +7,18 @@ Pseudokodas pavaizduoja funkcijos Hash() pagrindinius skaičiavimus ir veikimo p
 ```
 Sub Hash(string INPUT)
     Initialize var MAX_PRIME with desired prime value
-    Initialize array HEX_ARR of with 8 32bit prime hex values
+    Initialize array HEX_ARR with 8 32bit prime hex values
     Initialize array PRIMES with 30 different primes values smaller than MAX_PRIME
     for i = 0 to INPUT length - 1:
-        Initialize var ASCII set to INPUT[i] ascii value 
-        Initialize X set to PRIMES[ASCII MOD 30] / (MAX_PRIME + ASCII / 10) * pow(2, 32)
+        Initialize var ASCII with INPUT[i] ascii value 
+        Initialize X with PRIMES[ASCII mod 30] / (MAX_PRIME + ASCII / 10) * pow(2, 32)
         for j = 0 to 8:
             Initialize var TEMP with no value
             HEX_ARR[j] = HEX_ARR[j] xor X
             TEMP = HEX_ARR[j]
             HEX_ARR[j] = HEX_ARR[j] >> 5
             HEX_ARR[j] = HEX_ARR[j] xor TEMP
-    Append all HEX_ARR values in 32bit format and push them to var HEX_HASH
+    Append all 8 HEX_ARR values in 32bit format and push them to var HEX_HASH
     Return HEX_HASH as string
 ```
 
