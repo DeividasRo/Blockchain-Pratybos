@@ -2,6 +2,26 @@
 
 ## Pseudokodas
 
+Pseudokodas pavaizduoja funkcijos Hash() pagrindinius skaičiavimus ir veikimo principą.
+
+```
+Sub Hash(string INPUT)
+    Initialize var MAX_PRIME with desired prime value
+    Initialize array HEX_ARR of with 8 32bit prime hex values
+    Initialize array PRIMES with 30 different primes values smaller than MAX_PRIME
+    for i = 0 to INPUT length - 1:
+        Initialize var ASCII set to INPUT[i] ascii value 
+        Initialize X set to PRIMES[ASCII MOD 30] / (MAX_PRIME + ASCII / 10) * pow(2, 32)
+        for j = 0 to 8:
+            Initialize var TEMP with no value
+            HEX_ARR[j] = HEX_ARR[j] xor X
+            TEMP = HEX_ARR[j]
+            HEX_ARR[j] = HEX_ARR[j] >> 5
+            HEX_ARR[j] = HEX_ARR[j] xor TEMP
+    Append all HEX_ARR values in 32bit format and push them to var HEX_HASH
+    Return HEX_HASH as string
+```
+
 ## Eksperimentinis tyrimas-analizė
 
 ### Tyrimas Nr. 1
@@ -27,13 +47,13 @@ Tekstinio failo turinio *hash'avimui* naudojama komandinės eilutės komanda `pr
 
 | Failo vardas | Maišos funkcijos rezultatas|
 |:------------:|----------------------------|
-|***a1.txt***|b4cf0bbb7bf6dc381f5799bb092595a6edd30d0d97a7b298847a14f943f8d918|
-|***a2.txt***|7c206318b319b49bd7b8f118c1cafd05253c65ae5f48da3b4c957c5a8b17b1bb|
-|***b1.txt***|02f857d1cb8a127fac17bababad397cc593a41d7208335e333c4af57f24a1777|
-|***b2.txt***|105e889bd92ccd35beb165f0a87548864b9c9e9d3225eaa92162701de0ecc83d|
-|***c1.txt***|3b7c05f3f20e405d9593e8988357c5ee60be13f5190767c10a40fd75cbce4555|
-|***c2.txt***|a1b311d768c154790f5cfcbc1998d1cafa7107d183c873e5908fe95151015171|
-|***empty.txt***|e49b69c12de92c6f4a7484aa5cb0a9dcbf597fc7c6e00bf3d5a7914714292967|
+|***a1.txt***|c8adfafc04f699d80e4f72453e2910606afd3dddf71533a7e9cc2ac5480f7e52|
+|***a2.txt***|0042925fcc19f17bc6a01ae6f6c678c3a212557e3ffa5b042123426680e016f1|
+|***b1.txt***|7d66569cb76d6c6fbd83f3098c6ad877da0dcd62432ccb2a5d049095f9e0e7bb|
+|***b2.txt***|6fc089d6a5cbb325af252c439ecc073dc8ab1228518a14604fa24fdfeb4638f1|
+|***c1.txt***|44e204be8ee93e4d8407a12bb5ee8a55e3899f407aa899086480c2b7c064b599|
+|***c2.txt***|de2d109a14262a691ec8b50f2f219e7179468b64e0678d2cfe4fd6935aaba1bd|
+|***empty.txt***|9b05688c510e527f5be0cd196a09e6673c6ef372a54ff53abb67ae851f83d9ab|
 
 ### Tyrimas Nr. 2
 
@@ -141,3 +161,5 @@ Average bit difference: 49%
 ```
 
 ## Išvados
+
+Apibendrinant, maišos funkciją pavyko pritaikyti visiems iškeltiems reikalavimams. Stipriausia šios realizacijos pusė - trumpas rezultato apskaičiavimo laikas. Nors praktiškai kolizijų nerasta, didesnėje skirtingų simbolių imtyje ir testuojant skirtingų ilgių *string'ų* poras kolizijų turėtų atsirasti ir jų būtų daugiau, nei įmanoma išvengti turint optimaliausią maišos funkcijos realizaciją. Pirminiai skaičiai naudojami skaičiavimuose parinkti ganėtinai atsitiktinai, taip pat galima būtų paeksperimentuoti su jų bendru kiekiu ir papildomu panaudojimu skaičiavimuose. 
