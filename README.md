@@ -62,6 +62,8 @@ Trečiojo tyrimo metu ištirta, ar maišos funkcija yra praktiškai atspari koli
 
 Kiekvienoje poroje tikrinami abiejų simbolių eilučių *hash'ai*. Jeigu jie sutampa, aptinkama kolizija.
 
+Testas paleidžiamas `prog colltest` komanda.
+
 #### Rezultatai
 
 Atlikus visus testus, kolizijų neaptikta.
@@ -94,6 +96,8 @@ Tyrimo metu generuojama 100000 simbolių eilučių (*string'ų*) porų:
 - 25000 porų po 1000 atsitiktinių simbolių kiekvienoje simbolių eilutėje, kiekviena pora skiriasi 1 simboliu.
 
 Kiekvienoje poroje tikrinami abiejų simbolių eilučių *hash'ai* šešioliktainiu formatu ir dvejetainiu formatu. Tikrinamas kiekvienas simbolis ir nustatomas procentinis abiejų *string'ų* skirtingumas.
+
+Testas paleidžiamas `prog avaltest` komanda.
 
 #### Rezultatai
 

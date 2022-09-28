@@ -88,9 +88,8 @@ void AvalancheTest(std::string (*hash_func)(std::string), int symbol_count, int 
 
         if (s1 != s2)
         {
-            int hex_diff = 0, bit_diff = 0;
-            std::string h1 = hash_func(s1);
-            std::string h2 = hash_func(s2);
+            int hex_diff = 0;
+            std::string h1 = hash_func(s1), h2 = hash_func(s2);
 
             // Checking each symbol for difference at j position of both strings
             for (int j = 0; j < 64; j++)
@@ -107,6 +106,7 @@ void AvalancheTest(std::string (*hash_func)(std::string), int symbol_count, int 
                 diffs[2] = hex_diff;
             diffs[4] += hex_diff;
 
+            int bit_diff = 0;
             std::string b1 = "", b2 = "";
 
             // Creating binary string from hex string
