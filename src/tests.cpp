@@ -1,8 +1,9 @@
 #include "tests.h"
-#include <iostream>
+
 const std::string symbols = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-=[];',./\\_+{}:\"<>?|`~";
-std::uniform_int_distribution<int> dist(0, symbols.length());
+
 std::mt19937 mt(static_cast<long unsigned int>(std::chrono::high_resolution_clock::now().time_since_epoch().count()));
+std::uniform_int_distribution<int> dist(0, symbols.length());
 
 // Function to convert hex char to binary string
 std::string HexCharToBin(char c)
@@ -54,6 +55,7 @@ std::string CollisionTest(std::string (*hash_func)(std::string), int symbol_coun
     for (int i = 0; i < 25000; i++)
     {
         std::string s1 = "", s2 = "";
+        // Generate two strings with random symbols
         for (int j = 0; j < symbol_count; j++)
         {
             s1 += symbols[dist(mt)];
@@ -75,14 +77,14 @@ void AvalancheTest(std::string (*hash_func)(std::string), int symbol_count, int 
     for (int i = 0; i < 25000; i++)
     {
         std::string s1 = "", s2 = "";
-
+        // Generate one string with random symbols
         for (int j = 0; j < symbol_count; j++)
         {
             s1 += symbols[dist(mt)];
         }
 
-        s2 = s1;
-        s1[rand() % symbol_count] = symbols[dist(mt)];
+        s2 = s1;                                       // Copy string1 value to string2
+        s1[rand() % symbol_count] = symbols[dist(mt)]; // Change one random symbol of string2
 
         if (s1 != s2)
         {
@@ -90,6 +92,7 @@ void AvalancheTest(std::string (*hash_func)(std::string), int symbol_count, int 
             std::string h1 = hash_func(s1);
             std::string h2 = hash_func(s2);
 
+            // Checking each symbol for difference at j position of both strings
             for (int j = 0; j < 64; j++)
             {
                 if (h1[j] != h2[j])
@@ -104,13 +107,16 @@ void AvalancheTest(std::string (*hash_func)(std::string), int symbol_count, int 
                 diffs[2] = hex_diff;
             diffs[4] += hex_diff;
 
-            std::string b1, b2;
-            for (int i = 0; i < 64; i++)
+            std::string b1 = "", b2 = "";
+
+            // Creating binary string from hex string
+            for (int j = 0; j < 64; j++)
             {
-                b1 = HexCharToBin(h1[i]);
-                b2 = HexCharToBin(h1[i]);
+                b1 += HexCharToBin(h1[j]);
+                b2 += HexCharToBin(h2[j]);
             }
 
+            // Checking each symbol for difference at j position of both strings
             for (int j = 0; j < 256; j++)
             {
                 if (b1[j] != b2[j])

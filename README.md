@@ -1,4 +1,4 @@
-# Maišos funkcija V0.1
+# Maišos funkcija (v0.1)
 
 ## Pseudokodas
 
@@ -97,41 +97,41 @@ Kiekvienoje poroje tikrinami abiejų simbolių eilučių *hash'ai* šešioliktai
 
 #### Rezultatai
 
-Atlikus testus nustatyta, kad šešioliktainiame lygmenyje vidutinis skirtingumas lygus **92%**, o dvejetainiame lygmenyje vidutinis skirtumas lygus **42%**.
+Atlikus testus nustatyta, kad šešioliktainiame lygmenyje vidutinis skirtingumas lygus **92%**, o dvejetainiame lygmenyje vidutinis skirtumas lygus **49%**.
 
 ```
-Testing hash function avalanche effect:
+Testing hash function avalanche effect: 
 1# 25000 pairs of strings, 10 random symbols per string, only 1 differing symbol per pair...
 Min hex difference: 37%
 Max hex difference: 100%
 Average hex difference: 92%
-Min bit difference: 42%
-Max bit difference: 44%
-Average bit difference: 43%
+Min bit difference: 18%
+Max bit difference: 84%
+Average bit difference: 49%
 
 2# 25000 pairs of strings, 100 random symbols per string, only 1 differing symbol per pair...
 Min hex difference: 50%
 Max hex difference: 100%
 Average hex difference: 92%
-Min bit difference: 41%
-Max bit difference: 42%
-Average bit difference: 41%
+Min bit difference: 18%
+Max bit difference: 81%
+Average bit difference: 49%
 
 3# 25000 pairs of strings, 500 random symbols per string, only 1 differing symbol per pair...
-Min hex difference: 50%
-Max hex difference: 100%
-Average hex difference: 92%
-Min bit difference: 42%
-Max bit difference: 43%
-Average bit difference: 43%
-
-4# 25000 pairs of strings, 1000 random symbols per string, only 1 differing symbol per pair...
 Min hex difference: 37%
 Max hex difference: 100%
 Average hex difference: 92%
-Min bit difference: 42%
-Max bit difference: 43%
-Average bit difference: 42%
+Min bit difference: 18%
+Max bit difference: 81%
+Average bit difference: 49%
+
+4# 25000 pairs of strings, 1000 random symbols per string, only 1 differing symbol per pair...        
+Min hex difference: 50%
+Max hex difference: 100%
+Average hex difference: 92%
+Min bit difference: 15%
+Max bit difference: 84%
+Average bit difference: 49%
 ```
 
 ## Išvados
