@@ -14,19 +14,17 @@ std::string Hash(std::string input)
         double ascii = (int)input[i];
         // Handling "negative" ascii values
         if (ascii < 0)
-        {
             ascii += 256;
-        }
 
-        unsigned int x = primes[(int)(ascii) % 30] / double(max_prime + ascii / 10) * pow(2, 32); // formula
+        // Formula
+        unsigned int x = primes[(int)(ascii) % 30] / double(max_prime + ascii / 10.0) * pow(2, 32);
 
+        // Bitwise operations
         for (int j = 0; j < 8; j++)
         {
-            unsigned int temp;
-            // Bitwise operations:
+            unsigned int temp = hex_arr[j];
+            hex_arr[j] >>= 1;
             hex_arr[j] ^= x;
-            temp = hex_arr[j];
-            hex_arr[j] >>= 5;
             hex_arr[j] ^= temp;
         }
     }

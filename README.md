@@ -5,7 +5,7 @@
 Pseudokodas pavaizduoja funkcijos Hash() pagrindinius skaičiavimus ir veikimo principą.
 
 ```
-Sub Hash(string INPUT)
+function Hash(string INPUT):
     Initialize var MAX_PRIME with desired prime value
     Initialize array HEX_ARR with 8 32bit prime hex values
     Initialize array PRIMES with 30 different primes values smaller than MAX_PRIME
@@ -13,10 +13,9 @@ Sub Hash(string INPUT)
         Initialize var ASCII with INPUT[i] ascii value 
         Initialize X with PRIMES[ASCII mod 30] / (MAX_PRIME + ASCII / 10) * pow(2, 32)
         for j = 0 to 8:
-            Initialize var TEMP with no value
+            Initialize var TEMP with HEX_ARR[j] value
+            HEX_ARR[j] = HEX_ARR[j] >> 1
             HEX_ARR[j] = HEX_ARR[j] xor X
-            TEMP = HEX_ARR[j]
-            HEX_ARR[j] = HEX_ARR[j] >> 5
             HEX_ARR[j] = HEX_ARR[j] xor TEMP
     Append all 8 HEX_ARR values in 32bit format and push them to var HEX_HASH
     Return HEX_HASH as string
@@ -47,12 +46,12 @@ Tekstinio failo turinio *hash'avimui* naudojama komandinės eilutės komanda `pr
 
 | Failo vardas | Maišos funkcijos rezultatas|
 |:------------:|----------------------------|
-|***a1.txt***|c8adfafc04f699d80e4f72453e2910606afd3dddf71533a7e9cc2ac5480f7e52|
-|***a2.txt***|0042925fcc19f17bc6a01ae6f6c678c3a212557e3ffa5b042123426680e016f1|
-|***b1.txt***|7d66569cb76d6c6fbd83f3098c6ad877da0dcd62432ccb2a5d049095f9e0e7bb|
-|***b2.txt***|6fc089d6a5cbb325af252c439ecc073dc8ab1228518a14604fa24fdfeb4638f1|
-|***c1.txt***|44e204be8ee93e4d8407a12bb5ee8a55e3899f407aa899086480c2b7c064b599|
-|***c2.txt***|de2d109a14262a691ec8b50f2f219e7179468b64e0678d2cfe4fd6935aaba1bd|
+|***a1.txt***|835997a52c57302f23cee0fa0ad35e3b7787c1a4a23644c8b30a32a8459c7e11|
+|***a2.txt***|4dc222aee2cc8524ed5555f1c448eb30b91c74af6cadf1c37d9187a38b07cb1a|
+|***b1.txt***|25190a7def12fa85e5fc6f0dd415759a827236e81b53a981057bec16a19f3fdc|
+|***b2.txt***|0cec4fc4c6e7bf3ccc092ab4fde03023ab87735132a6ec382c8ea9af886a7a65|
+|***c1.txt***|257fbce3efbe47ebe55a3cf6d482cf7b82b3eb4a1b0b55bc053d386ea17d0f77|
+|***c2.txt***|ff41fb10358000183f647b050ebc8888588dacb9c135124fdf037f9d7b434884|
 |***empty.txt***|9b05688c510e527f5be0cd196a09e6673c6ef372a54ff53abb67ae851f83d9ab|
 
 ### Tyrimas Nr. 2
@@ -131,7 +130,7 @@ Testing hash function avalanche effect:
 Min hex difference: 37%
 Max hex difference: 100%
 Average hex difference: 92%
-Min bit difference: 18%
+Min bit difference: 15%
 Max bit difference: 84%
 Average bit difference: 49%
 
@@ -147,12 +146,12 @@ Average bit difference: 49%
 Min hex difference: 37%
 Max hex difference: 100%
 Average hex difference: 92%
-Min bit difference: 18%
-Max bit difference: 81%
+Min bit difference: 15%
+Max bit difference: 84%
 Average bit difference: 49%
 
-4# 25000 pairs of strings, 1000 random symbols per string, only 1 differing symbol per pair...        
-Min hex difference: 50%
+4# 25000 pairs of strings, 1000 random symbols per string, only 1 differing symbol per pair...
+Min hex difference: 37%
 Max hex difference: 100%
 Average hex difference: 92%
 Min bit difference: 15%

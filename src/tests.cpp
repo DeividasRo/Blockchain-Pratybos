@@ -47,7 +47,7 @@ std::string HexCharToBin(char c)
     return "";
 }
 
-std::string CollisionTest(std::string (*hash_func)(std::string), int symbol_count)
+int CollisionTest(std::string (*hash_func)(std::string), int symbol_count)
 {
     srand(time(NULL));
     int collision_count = 0;
@@ -68,7 +68,7 @@ std::string CollisionTest(std::string (*hash_func)(std::string), int symbol_coun
         }
     }
 
-    return "Collisions detected: " + std::to_string(collision_count);
+    return collision_count;
 }
 
 void AvalancheTest(std::string (*hash_func)(std::string), int symbol_count, int diffs[])
