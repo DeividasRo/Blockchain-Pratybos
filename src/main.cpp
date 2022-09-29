@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
             for (int i = 0; i < sizeof(tests) / sizeof(int); i++)
             {
                 std::cout << i + 1 << "# 25000 pairs of strings, " << tests[i] << " random symbols per string..." << std::endl;
-                std::cout << CollisionTest(&Hash, tests[i]) << std::endl;
+                std::cout << "Collisions detected: " << CollisionTest(&Hash, tests[i]) << std::endl;
                 std::cout << std::endl;
             }
             return 0;

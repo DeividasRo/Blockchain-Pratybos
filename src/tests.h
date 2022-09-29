@@ -11,7 +11,7 @@
 #include <chrono>
 #include <numeric>
 
-std::string CollisionTest(std::string (*)(std::string), int);
+int CollisionTest(std::string (*)(std::string), int);
 
 void AvalancheTest(std::string (*)(std::string), int, int[]);
 
