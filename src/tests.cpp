@@ -8,7 +8,6 @@ std::uniform_int_distribution<int> dist(0, symbols.length());
 // Function to convert hex char to binary string
 std::string HexCharToBin(char c)
 {
-    // TODO handle default / error
     switch (toupper(c))
     {
     case '0':

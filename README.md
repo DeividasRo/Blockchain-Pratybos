@@ -159,6 +159,44 @@ Max bit difference: 84%
 Average bit difference: 49%
 ```
 
+### Papildomi tyrimai
+
+Maišos funkcijos sparta palyginta su vienu populiariausių maišymo algoritmų **SHA-256**. 
+
+```
+Comparing my hash function execution time to SHA-256: 
+
+[a1.txt]
+My hash - 835997a52c57302f23cee0fa0ad35e3b7787c1a4a23644c8b30a32a8459c7e11       
+SHA-256 - 2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881
+My hash function hashing time:  12 microseconds
+SHA-256 hashing time:  7 microseconds
+
+[b1.txt]
+My hash - 25190a7def12fa85e5fc6f0dd415759a827236e81b53a981057bec16a19f3fdc       
+SHA-256 - d3a697562743f5f27834ff7660db0a9d9a7b9d68e762385b8e1b1ecf9e0b8685       
+My hash function hashing time:  71 microseconds
+SHA-256 hashing time:  25 microseconds
+
+[c1.txt]
+My hash - 257fbce3efbe47ebe55a3cf6d482cf7b82b3eb4a1b0b55bc053d386ea17d0f77       
+SHA-256 - 53934d95911acd329d6c2aabc43ffcee2e66d5f1b2dedfe410783bed52344016       
+My hash function hashing time:  165 microseconds
+SHA-256 hashing time:  38 microseconds
+
+[konstitucija.txt]
+My hash - f2a18af876e8499e7a9b92da59e2197a3b81a0badbbc9969ceda81fa05226db2       
+SHA-256 - ccd6bc7bf8bf3da26fc2a75a90360fea8f18b4770470fe5c298e64a1a4d7a633       
+My hash function hashing time:  2556 microseconds
+SHA-256 hashing time:  563 microseconds
+
+[uzduotis.txt]
+My hash - e5fc0f9d4002426f4f620fb764ee6a9a1e6fbcfcc68521c6d6aa90c02f55b8b2       
+SHA-256 - dcece866ac65c34562092dbab1edb5ffd406fba84de1561204b4b8ea95283f17       
+My hash function hashing time:  298 microseconds
+SHA-256 hashing time:  67 microseconds
+```
+
 ## Išvados
 
 Apibendrinant, maišos funkciją pavyko pritaikyti visiems iškeltiems reikalavimams. Stipriausia šios realizacijos pusė - trumpas rezultato apskaičiavimo laikas. Nors praktiškai kolizijų nerasta, didesnėje skirtingų simbolių imtyje ir testuojant skirtingų ilgių *string'ų* poras kolizijų turėtų atsirasti ir jų būtų daugiau, nei įmanoma išvengti turint optimaliausią maišos funkcijos realizacijos variantą. Kai kurie pirminiai skaičiai naudojami skaičiavimuose parinkti ganėtinai atsitiktinai, taip pat galima būtų paeksperimentuoti su jų bendru kiekiu ir papildomu panaudojimu skaičiavimuose. 
