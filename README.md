@@ -162,7 +162,7 @@ Average bit difference: 49%
 ### Papildomi tyrimai
 
 Maišos funkcijos sparta palyginta su vienu populiariausių maišymo algoritmų **SHA-256**. 
-
+Testavimas atliekamas *hash'uojant* skirtingos apimties įvestis, perskaitytas iš skirtingų duomenų failų.
 ```
 Comparing my hash function execution time to SHA-256: 
 
